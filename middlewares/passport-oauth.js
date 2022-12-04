@@ -5,7 +5,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 passport.use(new GoogleStrategy({
     clientID: "302433911650-g5hd4fdqte0fl47cvet5rtcn6i0v900v.apps.googleusercontent.com",
     clientSecret: "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",
-    callbackURL: "https://password-jwt-oauth-server-szaq.vercel.app/auth/callback"
+    callbackURL: "https://password-jwt-oauth-server-szaq.vercel.app/auth/callback",
+    // callbackURL:"http://localhost:5000/auth/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
      GoogleSchema.findOne({googleId: profile.id}, (err,user)=>
