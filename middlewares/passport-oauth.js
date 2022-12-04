@@ -1,10 +1,11 @@
 let GoogleSchema = require('../Model/GoogleModel')
+const {GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET} = require('../config/index')
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 passport.use(new GoogleStrategy({
-    clientID: "302433911650-g5hd4fdqte0fl47cvet5rtcn6i0v900v.apps.googleusercontent.com",
-    clientSecret: "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",
+    clientID: GOOGLE_CLIENT_ID,
+    clientSecret: GOOGLE_CLIENT_SECRET,
     callbackURL: "https://password-jwt-oauth-server-szaq.vercel.app/auth/callback",
     // callbackURL:"http://localhost:5000/auth/callback"
   },
