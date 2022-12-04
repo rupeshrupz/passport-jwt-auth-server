@@ -6,7 +6,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://passport-jwt-auth-server.vercel.app/auth/callback",
+    callbackURL: "https://passport-jwt-auth-server.vercel.app/auth/callback/google",
     // callbackURL:"http://localhost:5000/auth/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
